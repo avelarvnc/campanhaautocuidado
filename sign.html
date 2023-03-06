@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Autocuidado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-comum">
+        <a href="index.html" class="link-voltar">↩ Voltar</a>
+        <div class="header-comum-itens">
+            <img src="" alt="logotipo com duas mãos envolvendo um coração">
+            <h2>Campanha de Autocuidado</h2>
+        </div>
+       
+    </header>
+
+    <main>
+        <section class="home-text">
+
+            <h2>Inscreva-se no formulário a seguir:</h2>
+
+            <form action="userconfirm.html" class="form-cadastro">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" class="input-comum" placeholder="Como você gostaria de ser identificado(a)?" required>
+                <label for="unidade">Unidade Escolar:</label>
+                <select name="unidade" id="unidade" class="input-comum" placeholder="Identifique sua unidade escolar" required>
+                    <option value="">Selecione sua unidade escolar</option>
+                    <option value="SAN">SAN</option>
+                    <option value="BER">BER</option>
+                </select>
+                <label for="email">E-mail:</label>
+                <input type="text" name="email" id="email" class="input-comum" placeholder="seu.email@sp.senac.br" required>
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" class="input-comum" placeholder="Informe uma senha com ao menos 8 dígitos" required>
+                <label for="passwordc">Confirme sua senha:</label>
+                <input type="password" name="passwordc" id="passwordc" class="input-comum" placeholder="Repita a senha anterior" required>
+                <input type="submit" value="Confirmar" class="botao-comum">
+                
+            </form>
+        </section>
+
+        <footer>
+            Informações de rodapé
+        </footer>
+    </main>
+</body>
+</html>
