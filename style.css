@@ -99,7 +99,6 @@ footer{
 }
 
 .input-comum{
-    font-size: 1.2rem;
     background-color: var(--cor-destaque);
     color: var(--cor-base);
     border: 1px solid var(--cor-complemento);
@@ -112,7 +111,6 @@ footer{
 }
 
 .botao-comum{
-    font-size: 1.2rem;
     font-weight: bold;
     background-color: var(--cor-destaque);
     color: var(--cor-base);
