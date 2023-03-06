@@ -18,11 +18,12 @@ body{
 
 h1{
     margin: 3% 0;
+    font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
 }
 
 h2{
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin: 3% 0;
     font-family: 'Inter', sans-serif;
 }
@@ -111,7 +112,7 @@ footer{
 }
 
 .botao-comum{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
     background-color: var(--cor-destaque);
     color: var(--cor-base);
@@ -125,7 +126,6 @@ footer{
 }
 
 label{
-    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -139,7 +139,6 @@ label{
 
 .logout-link{
    margin-top: 48px;
-    font-size: 1.2rem;
     color: var(--cor-destaque);
 }
 
@@ -164,4 +163,8 @@ label{
 .feed-last{
     margin-left: 2%;
     margin-bottom: 3%;
+}
+
+.logo-mini{
+    margin-top: 2%;
 }
