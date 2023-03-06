@@ -168,5 +168,6 @@ label{
 }
 
 .login-block{
-    height: 70vh;
+    margin: auto;
+    height: 60vh;
 }
