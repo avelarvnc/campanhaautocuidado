@@ -143,6 +143,7 @@ label{
     color: var(--cor-destaque);
     font-weight: 900;
     margin-left: auto;
+    font-size: 0.8rem;
 }
 
 .content-text{
