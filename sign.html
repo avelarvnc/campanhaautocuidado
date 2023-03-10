@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário de Autocuidado</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="util.js"></script>
 </head>
 <body>
     <header class="header-comum">
@@ -37,10 +38,11 @@
                 <label for="email">E-mail:</label>
                 <input type="text" name="email" id="email" class="input-comum" placeholder="seu.email@sp.senac.br" required>
                 <label for="password">Senha:</label>
-                <input type="password" name="password" id="password" class="input-comum" placeholder="Informe uma senha com ao menos 8 dígitos" required>
+                <input type="password" name="password" id="password" class="input-comum" placeholder="Informe uma senha com ao menos 8 dígitos" minlength="8" required>
                 <label for="passwordc">Confirme sua senha:</label>
-                <input type="password" name="passwordc" id="passwordc" class="input-comum" placeholder="Repita a senha anterior" required>
-                <input type="submit" value="Confirmar" class="botao-comum">
+                <input type="password" name="passwordc" id="passwordc" class="input-comum" placeholder="Repita a senha anterior" oninput="check_pass()" minlength="8" required>
+                <span id="sysmessage" style="margin-left: auto;">Senhas devem combinar</span>
+                <input type="submit" id="submit" value="Confirmar" class="botao-comum" style="background-color: #888;" disabled>  
                 
             </form>
         </section>
