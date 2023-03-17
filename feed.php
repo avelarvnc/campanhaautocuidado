@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,7 +18,7 @@
             <img src="midia/logo-mini.svg" class="logo-mini" alt="logotipo com duas mãos envolvendo um coração">
             <div class="user-area">
                 <span class="user-icon">👤</span>
-                <span class="user-name">Beatriz</span><br>
+                <span class="user-name"><?php echo $_SESSION["uname"]; ?></span><br>
                 <a href="login.html" class="logout-link">Sair</a>
             </div>
         </div>
@@ -45,6 +46,7 @@
                 <input type="date" name="data" id="data" class="input-comum" required>
                 <label for="activity">O que você fez?</label>
                 <textarea name="atividade" id="atividade" cols="30" rows="10" placeholder="Escreva aqui o que você gostaria de registrar" class="input-comum" required></textarea>
+                <input type="hidden" name="uid" id="uid" value="<?php echo $_SESSION["uid"]; ?>">
                 <a href="hint.html" class="link-pequeno">Não sabe o que registrar? Clique aqui para ver algumas dicas. :)</a>
                 <input type="submit" value="Enviar" class="botao-comum">
 

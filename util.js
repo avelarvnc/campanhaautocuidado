@@ -1,8 +1,8 @@
 function check_pass() {
 
 
-    var pass = document.getElementById('password');
-    var passconfirm = document.getElementById('passwordc');
+    var pass = document.getElementById('senha');
+    var passconfirm = document.getElementById('senhaconfirm');
 
 
     if (pass.value === passconfirm.value) 
