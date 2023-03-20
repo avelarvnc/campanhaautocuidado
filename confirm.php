@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -24,8 +25,8 @@
         <section class="content-text">
 
             <h2>Atividade registrada!</h2>
-            <p style="font-weight: bold;">Parabéns pela ação, [nome da pessoa]! Continue a cuidar de você com dedicação e afeto.</p>
-            <a href="feed.html" class="botao-comum botao-centro">Voltar</a>
+            <p style="font-weight: bold;">Parabéns pela ação, <?php echo $_SESSION["uname"]; ?>! Continue a cuidar de você com dedicação e afeto.</p>
+            <a href="feed.php" class="botao-comum botao-centro">Voltar</a>
                 
             
         </section>

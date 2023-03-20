@@ -18,7 +18,7 @@ $usuario = mysqli_real_escape_string($link, $_REQUEST['uid']);
 $sql = "INSERT INTO atividade (dtAtividade , descricao, idUsuario) VALUES ('$data', '$atividade', '$usuario')";
 if(mysqli_query($link, $sql)){
     
-    header("Location: confirm.html");
+    header("Location: confirm.php");
     die();
     
 } else{

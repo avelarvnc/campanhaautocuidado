@@ -28,14 +28,38 @@
     <main>
         <section class="home-text">
 
-            <h2>Últimas atividades</h2>
-            <ul class="feed-last">
-                <li>27/02/2022 - Pratiquei atividade física</li>
-                <li>27/02/2022 - Fui ao cinema</li>
-                <li>28/02/2022 - Meditei</li>
-                <li>28/02/2022 - Caminhei na praia</li>
-                <li>30/01/2022 - Comecei a ler um livro novo</li>
-            </ul>        
+            <h2>Últimas atividades</h2> 
+            <p>(10 últimos registros realizados)</p>
+            
+           
+            <?php
+                //$link = mysqli_connect("localhost", "id20445259_admin", "S3n@c2023SAN", "id20445259_calendariobemestar");
+                $link = mysqli_connect("localhost", "root", "", "calendariobemestar");
+
+
+                // Check connection
+                if($link === false){
+                    die("ERROR: Could not connect. " . mysqli_connect_error());
+                }
+            
+                // Attempt insert query execution
+                $sql = "SELECT * FROM atividade WHERE idUsuario = " . $_SESSION["uid"] . " ORDER BY idAtividade DESC LIMIT 10;";
+                $result = mysqli_query($link,$sql);
+
+                if ($result->num_rows > 0){
+                    echo "<ul>";
+                    while($row = $result->fetch_assoc()) {
+                        echo "<li>" . $row["descricao"] . "</li>";
+                    }   
+                    echo "</ul>";
+                }
+                else{
+                    echo "<p>Nenhuma atividade foi encontrada. Que tal começar agora? :) </p>";
+                }
+               
+                mysqli_close($link);
+            ?>
+               
                 
             </form>
         </section>
@@ -47,7 +71,7 @@
                 <label for="activity">O que você fez?</label>
                 <textarea name="atividade" id="atividade" cols="30" rows="10" placeholder="Escreva aqui o que você gostaria de registrar" class="input-comum" required></textarea>
                 <input type="hidden" name="uid" id="uid" value="<?php echo $_SESSION["uid"]; ?>">
-                <a href="hint.html" class="link-pequeno">Não sabe o que registrar? Clique aqui para ver algumas dicas. :)</a>
+                <a href="hint.php" class="link-pequeno">Não sabe o que registrar? Clique aqui para ver algumas dicas. :)</a>
                 <input type="submit" value="Enviar" class="botao-comum">
 
 

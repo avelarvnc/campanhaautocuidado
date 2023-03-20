@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,13 +12,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header-comum">
-        <a href="feed.html" class="link-voltar">↩ Voltar</a>
+<header class="header-comum">
+        <a href="index.html" class="link-voltar">↩ Voltar</a>
         <div class="header-comum-itens">
             <img src="midia/logo-mini.svg" class="logo-mini" alt="logotipo com duas mãos envolvendo um coração">
             <div class="user-area">
                 <span class="user-icon">👤</span>
-                <span class="user-name">Beatriz</span><br>
+                <span class="user-name"><?php echo $_SESSION["uname"]; ?></span><br>
                 <a href="login.html" class="logout-link">Sair</a>
             </div>
         </div>
